@@ -62,12 +62,15 @@ No entanto, para o escopo deste desafio, o chatbot foi projetado para trabalhar 
 - **Pandas / Matplotlib / Seaborn / Plotly** — Manipulação e visualização de dados (Apesar de usar SQL, a entrada dos usuário pode ser melhor respondida em certos cenários com outras bibliotecas do python)
 - **Google Vertex AI (ChatVertexAI)** — Modelos de linguagem (LLM) (O crédito liberado para uso foi maior em relação aos outros testados que tiveram problema no teste -openai e dois modelos do hugging face-)
 - **Python-dotenv** — Carregamento de variáveis de ambiente (Por segurança guardar as credenciais dos serviços necessários na lógica)
+- **LLM usado no Vertex: gemini-2.0-flash-001**
 
 
 ---
 
 
-## 🧠 Arquitetura em alto nível
+## 🧠 Arquitetura
+
+Durante o desenvolvimento do desafio, foi usado um quadro no drawio onde registrei todo meu fluxo de pensamento e diagramas: [https://drive.google.com/file/d/11ktLvDx5ljq2JsvZM34S9gztqkTtwF0Y/view?usp=sharing]
 
 - **Frontend:** Chatbot interativo desenvolvido em **Streamlit**, capaz de receber perguntas em linguagem natural e exibir respostas em texto, tabelas e gráficos.  
 - **Orquestração / Backend:** **LangChain** coordena as chains que transformam consultas do usuário em queries SQL, código Pandas e insights textuais.  
@@ -93,11 +96,11 @@ No entanto, para o escopo deste desafio, o chatbot foi projetado para trabalhar 
 ## 🔮 Próximas melhorias
 
 - Melhorar a contextualização do LLM para evitar erros de interpretação  
-- Adicionar suporte a gráficos personalizados sob demanda  
+- Adicionar suporte a gráficos (Não consegui fazer rodar ainda essa tool, está em análise)
 - Implementar cache local de resultados
-- Melhorar o script de limpeza e transformação nos dados (tem colunas que estão retornando com valores nulos quando não deveria)
+- Melhorar o script de limpeza e transformação nos dados (tem colunas que estão retornando com valores nulos quando não deveria, como idade por exemplo)
 - Pesquisar uma forma mais otimizada de fazer as consultas (seja com outra tecnologia como Athena ou outra extensão diferente do parquet)
-- Refatorar os testes unitários para ter uma melhor cobertura do projeto (ajustar os mocks)
+- Refatorar os testes unitários para ter uma melhor cobertura do projeto (ajustar os mocks e acrescentar testes unitários para cada tool)
 - Aperfeiçoar os prompts e docs strings usadas para ter um melhor uso da LLM
 - Analisar, debugar e refatorar a estrutura da chain para a orquestração ocorrer de uma melhor forma
 
@@ -105,6 +108,50 @@ No entanto, para o escopo deste desafio, o chatbot foi projetado para trabalhar 
 
 ---
 ## ⚙️ Como usar o projeto
+
+**Resumo inicial:** as intruções são para rodar em localhost com o dockerfile disponivel, mas para rodar por completo esse projeto você precisa gerar suas credenciais pessoais dos serviços externos usados, como o llm e o aws s3. 
+
+- **[PASSO 1]** Clonar o repositório:
+
+comando: ```git clone https://github.com/brunacarvalho202/ChatBot_EDA.git```
+
+- **[PASSO 2]** Criar suas credenciais para os serviços usados como os usados: aws s3 e modelo de llm gemini-2.0-flash-001 <br>
+- **[PASSO 3]** Criar arquivos sensíveis que são usados mas não foram expostos como .env e config.py
+
+  **observação 1: abaixo estão as variaveis de ambiente usadas para voce usar as mesmas se nao quiser adaptar seu projeto**
+
+
+```env
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_REGION=
+S3_BUCKET=
+S3_KEY=
+S3_DATASET_PATH=
+S3_PARQUET_PATH=
+GOOGLE_APPLICATION_CREDENTIALS=
+```
+
+
+  **observação 2: abaixo um modelo do arquivo config.py para você usar se precisar**
+
+```python
+import os
+AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+AWS_REGION = os.getenv("AWS_REGION")
+S3_BUCKET = os.getenv("S3_BUCKET")
+S3_KEY = os.getenv("S3_KEY")
+S3_DATASET_PATH = os.getenv("S3_DATASET_PATH")
+S3_PARQUET_PATH = os.getenv("S3_PARQUET_PATH")
+GOOGLE_APPLICATION_CREDENTIALS = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
+PROJECT_ID = "<SEU_PROJECT_ID_DO_GOOGLE>"
+CREDENTIALS = GOOGLE_APPLICATION_CREDENTIALS
+ ```
+
+
+- **[PASSO 4]** Rodar o container Docker com o comando que está dentro dele (Substitua /caminho/local/ pelos caminhos corretos no seu computador)
+- **[PASSO 5]** Acessar o chatbot localmente: **http://localhost:8501**
 
 
 ---
