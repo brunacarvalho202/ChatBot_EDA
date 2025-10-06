@@ -115,6 +115,8 @@ Durante o desenvolvimento do desafio, foi usado um quadro no drawio onde registr
 
 **Resumo inicial:** as intruções são para rodar em localhost com o dockerfile disponivel, mas para rodar por completo esse projeto você precisa gerar suas credenciais pessoais dos serviços externos usados, como o llm e o aws s3. 
 
+a documentação da langchain para uso dos modelos vertex que usei pode ajudar: [https://share.google/nRPyHueEGS6eqQUeI]
+
 - **[PASSO 1]** Clonar o repositório:
 
 comando: ```git clone https://github.com/brunacarvalho202/ChatBot_EDA.git```
