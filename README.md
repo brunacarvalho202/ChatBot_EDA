@@ -100,7 +100,7 @@ Durante o desenvolvimento do desafio, foi usado um quadro no drawio onde registr
 
 - Mudar a abordagem sequencial para dinamica que usei com langchain (Percebi depois de estudar que usei uma forma sequencial do langchain com as chains e poderia ser mais dinamico com o aente decidindo a tool [])
 - Melhorar a contextualização do LLM para evitar erros de interpretação  
-- Adicionar suporte a gráficos (Não consegui fazer rodar ainda essa tool, está em análise)
+- Adicionar suporte a gráficos (Não consegui fazer rodar ainda essa tool, está em análise -  as tools de gráfico existem e foram testadas mas não foram encaixadas no fluxo sequencial das chains)
 - Implementar cache local de resultados
 - Melhorar o script de limpeza e transformação nos dados (tem colunas que estão retornando com valores nulos quando não deveria, como idade por exemplo)
 - Pesquisar uma forma mais otimizada de fazer as consultas (seja com outra tecnologia como Athena ou outra extensão diferente do parquet)
