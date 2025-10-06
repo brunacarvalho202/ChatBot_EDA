@@ -1,0 +1,12 @@
+# Virtual environment
+venv/
+ENV/
+env/
+*.pyc
+__pycache__/
+
+# Arquivos de configuração e credenciais
+.env
+*.env
+config.py
+desafiochatbot-bfef1957886e.json
