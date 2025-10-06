@@ -70,7 +70,7 @@ No entanto, para o escopo deste desafio, o chatbot foi projetado para trabalhar 
 
 ## 🧠 Arquitetura
 
-Durante o desenvolvimento do desafio, foi usado um quadro no drawio onde registrei todo meu fluxo de pensamento e diagramas: [https://drive.google.com/file/d/11ktLvDx5ljq2JsvZM34S9gztqkTtwF0Y/view?usp=sharing]
+Durante o desenvolvimento do desafio, foi usado um quadro no drawio onde registrei todo meu fluxo de pensamento e diagramas (percorrer ele pois é um mapa mental): [https://drive.google.com/file/d/11ktLvDx5ljq2JsvZM34S9gztqkTtwF0Y/view?usp=sharing]
 
 <img width="1422" height="794" alt="Captura de tela 2025-10-06 175712" src="https://github.com/user-attachments/assets/45441a26-0834-4d27-b7c6-72e0c0a36586" />
 
