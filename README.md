@@ -95,6 +95,7 @@ Durante o desenvolvimento do desafio, foi usado um quadro no drawio onde registr
 
 ## 🔮 Próximas melhorias
 
+- Mudar a abordagem sequencial para dinamica que usei com langchain (Percebi depois de estudar que usei uma forma sequencial do langchain com as chains e poderia ser mais dinamico com o aente decidindo a tool [])
 - Melhorar a contextualização do LLM para evitar erros de interpretação  
 - Adicionar suporte a gráficos (Não consegui fazer rodar ainda essa tool, está em análise)
 - Implementar cache local de resultados
