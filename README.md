@@ -72,7 +72,7 @@ No entanto, para o escopo deste desafio, o chatbot foi projetado para trabalhar 
 
 Durante o desenvolvimento do desafio, foi usado um quadro no drawio onde registrei todo meu fluxo de pensamento e diagramas (percorrer ele pois é um mapa mental): [https://drive.google.com/file/d/11ktLvDx5ljq2JsvZM34S9gztqkTtwF0Y/view?usp=sharing]
 
-<img width="1422" height="794" alt="Captura de tela 2025-10-06 175712" src="https://github.com/user-attachments/assets/45441a26-0834-4d27-b7c6-72e0c0a36586" />
+<img width="8377" height="8822" alt="flow" src="https://github.com/user-attachments/assets/3927efc6-689a-47ea-99c6-236b6d3e2d1c" />
 
 
 - **Frontend:** Chatbot interativo desenvolvido em **Streamlit**, capaz de receber perguntas em linguagem natural e exibir respostas em texto, tabelas e gráficos.  
